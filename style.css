@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8f5ff, #eee6ff);
+    color: #29213d;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #7951b5;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #403250;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9665da;
+}
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 12%;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.subtitle {
+    letter-spacing: 4px;
+    color: #9665da;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    margin-bottom: 12px;
+}
+
+h1 span {
+    color: #9665da;
+}
+
+h2 {
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.description {
+    max-width: 570px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #62586c;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background: #9665da;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background: #7345bc;
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #82768e;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 60px 8%;
+    }
+}
