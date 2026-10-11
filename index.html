@@ -1,49 +1,180 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nursena </title>
+
+    <title>Hatice Nursena Resüloğlu | Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- Falling flowers -->
+    <div id="flowers-container" aria-hidden="true"></div>
+
+    <!-- Navigation -->
     <header>
         <nav class="navbar">
-            <div class="logo">NURSENA.</div>
+            <a href="index.html" class="logo">NURSENA.</a>
 
             <div class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="index.html" class="active">Home</a>
                 <a href="about.html">About Me</a>
                 <a href="projects.html">Projects</a>
+                <a href="cv.html">CV</a>
+                <a href="hobbies.html">Hobbies</a>
                 <a href="maps.html">Maps</a>
-                
+                <a href="contact.html">Contact</a>
             </div>
         </nav>
     </header>
 
     <main>
+
+        <!-- Hero Section -->
         <section class="hero">
-            <p class="subtitle">WELCOME TO MY PORTFOLIO</p>
 
-            <h1>Hi, I'm <span>Nursena!</span></h1>
+            <div class="intro-container">
 
+                <!-- Profile Photo -->
+                <img
+                    src="nursenar_profile_pic.jpeg"
+                    alt="Hatice Nursena Resüloğlu"
+                    class="profile-pic"
+                >
 
-            
-<div class="about-preview">
-    <h3>Learn More About Me.</h3>
-    <a href="about.html" class="about-btn">
-        About Me →
-    </a>
-</div>
+                <!-- Introduction -->
+                <div class="intro-text">
+
+                    <p class="subtitle">
+                        WELCOME TO MY PORTFOLIO
+                    </p>
+
+                    <h1>
+                        Hi, I'm <span>Nursena!</span>
+                    </h1>
+
+                    <h2>
+                        Geomatics Engineering Student
+                    </h2>
+
+                    <p class="description">
+                        Hello! My name is Hatice Nursena
+                        Resüloğlu, but you can call me
+                        Nursena or Nurs! 🌸
+
+                        I am a senior Geomatics Engineering
+                        student at Hacettepe University.
+
+                        I am interested in Geographic
+                        Information Systems, remote sensing,
+                        spatial analysis, and web mapping
+                        technologies.
+
+                        Welcome to my personal website,
+                        where I share my projects,
+                        experiences, hobbies, and more.
+
+                        Discover the Nurs!
+                    </p>
+
+                    <a href="projects.html" class="btn">
+                        Explore My Projects →
+                    </a>
+
+                </div>
+            </div>
 
         </section>
+
+        <!-- About Me Preview -->
+        <section class="about-section">
+
+            <h2>Learn More About Me.</h2>
+
+            <p>
+                Curious about my journey, interests,
+                and experiences?
+                Get to know me better!
+            </p>
+
+            <a href="about.html" class="about-btn">
+                About Me →
+            </a>
+
+        </section>
+
     </main>
 
     <footer>
-        <p>© 2026 Nursena | GMT458 Web GIS</p>
+        <p>
+            © 2026 Hatice Nursena Resüloğlu |
+            All rights reserved.
+        </p>
     </footer>
+
+    <!-- Flower Animation -->
+    <script>
+        const container =
+            document.getElementById('flowers-container');
+
+        const emojis = [
+            '🌸', '🌼', '🌺', '🌷', '🌻', '💮'
+        ];
+
+        function spawnFlower() {
+
+            const wrapper =
+                document.createElement('span');
+
+            wrapper.className = 'flower';
+
+            const inner =
+                document.createElement('span');
+
+            inner.className = 'petal';
+
+            inner.textContent =
+                emojis[Math.floor(
+                    Math.random() * emojis.length
+                )];
+
+            wrapper.style.left =
+                Math.random() * 100 + 'vw';
+
+            wrapper.style.setProperty(
+                '--fallDur',
+                (3 + Math.random() * 5) + 's'
+            );
+
+            inner.style.setProperty(
+                '--swayX',
+                ((Math.random() * 2 - 1) * 30) + 'px'
+            );
+
+            inner.style.setProperty(
+                '--spinDur',
+                (2 + Math.random() * 3) + 's'
+            );
+
+            inner.style.fontSize =
+                (16 + Math.random() * 24) + 'px';
+
+            wrapper.appendChild(inner);
+            container.appendChild(wrapper);
+
+            setTimeout(() => wrapper.remove(), 9000);
+        }
+
+        if (!window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches) {
+            setInterval(spawnFlower, 350);
+        }
+    </script>
 
 </body>
 </html>
-
