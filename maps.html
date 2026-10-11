@@ -138,20 +138,28 @@
       }
     ];
 
-    const map = new ol.Map({
-      target: "map",
-      layers: [
+const map = new ol.Map({
+    target: "map",
+
+    layers: [
         new ol.layer.Tile({
-        source: new ol.source.OSM({
-    wrapX: false
-})
+            source: new ol.source.XYZ({
+                url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                wrapX: false,
+                attributions:
+                    'Tiles &copy; Esri and its data providers'
+            })
         })
-      ],
-      view: new ol.View({
+    ],
+
+    view: new ol.View({
         center: ol.proj.fromLonLat([34.5, 39.0]),
-        zoom: 6
-      })
-    });
+        zoom: 6,
+        minZoom: 3,
+        maxZoom: 18
+    })
+});
+
 
     const features = cities.map(city => {
       const feature = new ol.Feature({
