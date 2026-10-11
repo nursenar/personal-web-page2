@@ -1152,3 +1152,156 @@ footer {
     }
 }
 
+/* =====================================
+   CONTACT PAGE - NURSENA PORTFOLIO
+===================================== */
+
+.contact-section {
+    max-width: 1050px;
+    margin: 70px auto 100px;
+    padding: 55px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #e8dafa;
+    border-radius: 28px;
+    box-shadow: 0 15px 40px rgba(115, 69, 188, 0.1);
+    animation: fadeIn 0.9s ease;
+}
+
+/* Page Heading */
+
+.contact-section h2 {
+    color: #7951b5;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.contact-section > p {
+    color: #62586c;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 45px;
+}
+
+/* Social Media Cards */
+
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.contact-card {
+    background: #faf7ff;
+    border: 2px solid #eadfff;
+    border-radius: 22px;
+    min-height: 180px;
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(115, 69, 188, 0.07);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* Hover Effect */
+
+.contact-card:hover {
+    background: #f1e7ff;
+    border-color: #ba95ed;
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(115, 69, 188, 0.2);
+}
+
+/* Social Media Icons */
+
+.contact-card img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+}
+
+.contact-card:hover img {
+    transform: rotate(10deg) scale(1.12);
+}
+
+/* Social Media Names */
+
+.contact-card span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #7951b5;
+}
+
+.contact-card:hover span {
+    color: #60359e;
+}
+
+/* Keyboard Accessibility */
+
+.contact-card:focus-visible {
+    outline: 3px solid #9665da;
+    outline-offset: 4px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 850px) {
+    .contact-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-section {
+        margin: 40px 20px;
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section h2 {
+        font-size: 32px;
+    }
+
+    .contact-section > p {
+        font-size: 15px;
+    }
+
+    .contact-links {
+        gap: 12px;
+    }
+
+    .contact-card {
+        min-height: 145px;
+        padding: 20px 10px;
+    }
+
+    .contact-card img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-section {
+        animation: none;
+    }
+
+    .contact-card,
+    .contact-card img {
+        transition: none;
+    }
+}
+

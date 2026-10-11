@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me | Hatice Nursena Resüloğlu</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .contact-section {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .contact-section h2 {
+      color: #1abc9c;
+      margin-bottom: 8px;
+    }
+    .contact-section p {
+      color: #6b7b8c;
+      margin-bottom: 30px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .contact-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      width: 160px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+
+    }
+    .contact-card:hover img {
+  transform: rotate(10deg) scale(1.1);
+  transition: 0.3s;
+}
+
+
+    .contact-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .contact-card span {
+      font-weight: 600;
+      color: #2c3e50;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .contact-card {
+        width: 130px;
+        height: 130px;
+      }
+      .contact-card img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+ 
+<header>
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">NURSENA.</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="cv.html">CV</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="maps.html">Maps</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+
+    </nav>
+</header>
+
+
+  <main>
+    <section class="contact-section">
+      <h2>Contact Me</h2>
+      <p>If you want to contact me, you can reach me through the following platforms.💜</p>
+
+      <div class="contact-links">
+        <!-- Gmail -->
+        <a class="contact-card" href="mailto:hnresl07@gmail.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail Logo">
+          <span>Email</span>
+        </a>
+
+        <!-- Instagram -->
+        <a class="contact-card" href="https://www.instagram.com/n.nursena.a/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Logo">
+          <span>Instagram</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="contact-card" href="https://www.linkedin.com/in/hatice-nursena-res%C3%BClo%C4%9Flu-286602245/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+          <span>LinkedIn</span>
+        </a>
+
+       
+<!-- GitHub -->
+<a class="contact-card"
+   href="https://github.com/nursenar"
+   target="_blank"
+   rel="noopener noreferrer">
+
+    <img
+        src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"
+        alt="GitHub Logo">
+
+    <span>GitHub</span>
+</a>
+
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Hatice Nursena Resüloğlu | All rights reserved.</p>
+  </footer>
+  <script src="main.js"></script>
+
+</body>
+</html>
