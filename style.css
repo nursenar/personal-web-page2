@@ -1406,4 +1406,203 @@ footer {
     }
 }
 
+/* DARK MODE */
+
+.theme-toggle {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+    padding: 12px 20px;
+    background: #9665da;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.dark-mode {
+    background: #21172f;
+    color: #f1e6ff;
+}
+
+.dark-mode .navbar {
+    background: #291d38;
+}
+
+.dark-mode .nav-links a,
+.dark-mode .logo {
+    color: #e1c7ff;
+}
+
+.dark-mode .hero h1,
+.dark-mode .hero h2 {
+    color: #f1e6ff;
+}
+
+.dark-mode .description,
+.dark-mode .subtitle {
+    color: #d2bce9;
+}
+
+.dark-mode .about-card,
+.dark-mode .cv-page,
+.dark-mode .hobby,
+.dark-mode .contact-section,
+.dark-mode .coming-soon,
+.dark-mode .maps-page,
+.dark-mode .about-hero,
+.dark-mode .favorites {
+    background: #342345;
+    border-color: #59416e;
+}
+
+.dark-mode .about-card p,
+.dark-mode .hobby p,
+.dark-mode .cv-section p,
+.dark-mode .contact-section > p {
+    color: #ddcdec;
+}
+
+.dark-mode .about-section,
+.dark-mode .fun-facts,
+.dark-mode .fav-group,
+.dark-mode .cv-item,
+.dark-mode .fact,
+.dark-mode .contact-card {
+    background: #403052;
+    border-color: #59416e;
+}
+
+.dark-mode .fact p,
+.dark-mode .fav-group li,
+.dark-mode .cv-bullets li,
+.dark-mode .coming-description {
+    color: #ddcdec;
+}
+
+.dark-mode footer {
+    color: #ccb8e5;
+}
+
+/* ===================================
+   NURSENA FLOWER ANIMATION
+=================================== */
+
+#flowers-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9000;
+}
+
+.nurs-flower {
+    position: absolute;
+    top: -50px;
+    display: block;
+    line-height: 1;
+    pointer-events: none;
+
+    animation: nursFlowerFall
+        var(--flower-duration)
+        linear forwards;
+}
+
+@keyframes nursFlowerFall {
+    0% {
+        transform: translate3d(0, -40px, 0)
+                   rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate3d(
+                var(--flower-drift),
+                110vh,
+                0
+            )
+            rotate(var(--flower-rotation));
+
+        opacity: 0;
+    }
+}
+
+/* Controls */
+
+#nurs-flower-controls {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 10001;
+
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dfc9fb;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(115,69,188,0.2);
+}
+
+#nurs-flower-controls button {
+    background: #9665da;
+    color: white;
+    border: none;
+    border-radius: 25px;
+
+    padding: 10px 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#nurs-flower-controls label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: #7951b5;
+    font-size: 13px;
+}
+
+#nurs-flower-controls select {
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #d9c2ff;
+    background: white;
+    color: #403250;
+}
+
+@media (max-width: 600px) {
+    #nurs-flower-controls {
+        right: 10px;
+        bottom: 75px;
+        padding: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nurs-flower {
+        animation: none;
+        display: none;
+    }
+}
+
 
