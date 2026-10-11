@@ -41,7 +41,7 @@
 
                 <!-- Profile Photo -->
                 <img
-                    src="nursenar_profile_pic.jpeg"
+                    src="nurs_animation.png"
                     alt="Hatice Nursena Resüloğlu"
                     class="profile-pic"
                 >
@@ -81,8 +81,8 @@
                         Discover the Nurs!
                     </p>
 
-                    <a href="projects.html" class="btn">
-                        Explore My Projects →
+                    <a href="aboutme.html" class="btn">
+                        Learn about me →
                     </a>
 
                 </div>
@@ -90,22 +90,7 @@
 
         </section>
 
-        <!-- About Me Preview -->
-        <section class="about-section">
-
-            <h2>Learn More About Me.</h2>
-
-            <p>
-                Curious about my journey, interests,
-                and experiences?
-                Get to know me better!
-            </p>
-
-            <a href="about.html" class="about-btn">
-                About Me →
-            </a>
-
-        </section>
+        
 
     </main>
 
@@ -116,65 +101,7 @@
         </p>
     </footer>
 
-    <!-- Flower Animation -->
-    <script>
-        const container =
-            document.getElementById('flowers-container');
 
-        const emojis = [
-            '🌸', '🌼', '🌺', '🌷', '🌻', '💮'
-        ];
-
-        function spawnFlower() {
-
-            const wrapper =
-                document.createElement('span');
-
-            wrapper.className = 'flower';
-
-            const inner =
-                document.createElement('span');
-
-            inner.className = 'petal';
-
-            inner.textContent =
-                emojis[Math.floor(
-                    Math.random() * emojis.length
-                )];
-
-            wrapper.style.left =
-                Math.random() * 100 + 'vw';
-
-            wrapper.style.setProperty(
-                '--fallDur',
-                (3 + Math.random() * 5) + 's'
-            );
-
-            inner.style.setProperty(
-                '--swayX',
-                ((Math.random() * 2 - 1) * 30) + 'px'
-            );
-
-            inner.style.setProperty(
-                '--spinDur',
-                (2 + Math.random() * 3) + 's'
-            );
-
-            inner.style.fontSize =
-                (16 + Math.random() * 24) + 'px';
-
-            wrapper.appendChild(inner);
-            container.appendChild(wrapper);
-
-            setTimeout(() => wrapper.remove(), 9000);
-        }
-
-        if (!window.matchMedia(
-            '(prefers-reduced-motion: reduce)'
-        ).matches) {
-            setInterval(spawnFlower, 350);
-        }
-    </script>
 
 </body>
 </html>
