@@ -1,7 +1,7 @@
 # personal-web-page2
 GMT458- 2627 Assignment 1: Personal Web Page
 # 🌸 Hatice Nursena Resüloğlu – Personal Website
-🔗 [ https://gmt-458-web-gis.github.io/personal-web-page-nursenar-1/]( https://gmt-458-web-gis.github.io/personal-web-page-nursenar-1/)
+🔗 [ https://github.com/nursenar/personal-web-page2.git] (https://github.com/nursenar/personal-web-page2.git)
 
 This project is a **personal portfolio website** built using **HTML, CSS, and JavaScript**.  
 It was created to introduce myself, showcase my projects and interests, and demonstrate my web development skills.
