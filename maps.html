@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Where is the Nurs? | Hatice Nursena Resüloğlu</title>
+    
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="css/style.css" />
+<title>Where is the Nurs? | Hatice Nursena Resüloğlu</title>
 
+<!-- My Website CSS -->
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- OpenLayers CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@7.4.0/ol.css" />
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css" />
 
   <style>
@@ -79,6 +87,26 @@
     </div>
 
 </main>
+
+<!-- Leaflet Map Section -->
+<section class="leaflet-section">
+
+    <h2>📍 My Travel Map – Leaflet</h2>
+
+    <p class="maps-description">
+        Explore the cities I have visited using Leaflet!
+        Zoom in to reveal the markers and click on
+        a city to learn more. 💜
+    </p>
+
+    <div id="leaflet-map"></div>
+
+    <p class="leaflet-info">
+        🌸 City markers become visible at zoom level 7.
+    </p>
+
+</section>
+
 
 
   <footer>
@@ -224,6 +252,12 @@ updateMarkerVisibility();
   </script>
   <script src="js/main.js"></script>
   <script src="js/script.js"></script>
+ 
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Our Leaflet map -->
+<script src="js/leaflet-map.js"></script>
 
 </body>
 </html>
