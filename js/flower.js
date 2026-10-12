@@ -1,3 +1,4 @@
+console.log("🌸 Flower JS loaded successfully!");
 
 document.addEventListener("DOMContentLoaded", () => {
 
