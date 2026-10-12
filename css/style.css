@@ -1765,3 +1765,124 @@ footer {
     position: relative;
     overflow: hidden;
 }
+
+/* ==================================
+   PROJECTS TABLE – PURPLE THEME
+================================== */
+
+.projects-section {
+    max-width: 1150px;
+    margin: 60px auto;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 32px;
+    color: #7951b5;
+    margin-bottom: 15px;
+}
+
+.projects-description {
+    color: #756984;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.project-table-wrapper {
+    overflow-x: auto;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(121, 81, 181, 0.12);
+}
+
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.project-table th {
+    background: linear-gradient(
+        135deg,
+        #7951b5,
+        #a67be3
+    );
+    color: white;
+    padding: 18px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.project-table td {
+    padding: 18px;
+    border-bottom: 1px solid #eee4fa;
+    color: #514560;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.project-table tbody tr:nth-child(even) {
+    background: #f8f3ff;
+}
+
+.project-table tbody tr:hover {
+    background: #efe4ff;
+    transition: background 0.3s ease;
+}
+
+.project-table img {
+    width: 125px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.project-table img:hover {
+    transform: scale(1.08);
+}
+
+/* Dark Mode */
+.dark-mode .projects-section h2 {
+    color: #d8baff;
+}
+
+.dark-mode .project-table {
+    background: #292238;
+}
+
+.dark-mode .project-table td {
+    color: #f3ebff;
+    border-bottom-color: #493960;
+}
+
+.dark-mode .project-table tbody tr:nth-child(even) {
+    background: #342a46;
+}
+
+.dark-mode .project-table tbody tr:hover {
+    background: #47355f;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .projects-section {
+        padding: 25px 10px;
+    }
+
+    .projects-section h2 {
+        font-size: 25px;
+    }
+
+    .project-table {
+        min-width: 650px;
+    }
+
+    .project-table img {
+        width: 95px;
+        height: 75px;
+    }
+}
